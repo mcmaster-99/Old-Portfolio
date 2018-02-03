@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0 maximum-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="canonical" href="http://localhost:4000/">
+<link rel="alternate" type="application/rss+xml" title="Bilal&#39;s Portfolio Site" href="/feed.xml">
+
+<body>
+  
+<!--
+===========================================
+===========================================
+============== LANDING PAGE ===============
+===========================================
+===========================================
+-->
+
+<!-- =============NAVIGATION BAR DIV============= -->
+
+<div id="homePage">
+
+  <div class="navbar">
+
+    <div id="projectsNavDiv">
+      <button id="projectsNavButton">
+        <img class="navbarIcons" id="projectsIcon" src="/img/icons/png/briefcase.png">
+        <ul class="navbarText" id="projectsText">Projects</ul>
+      </button>
+    </div>
+
+    <div id="contactNavButton">
+      <button id="contactsNavButton">
+        <img class="navbarIcons" id="contactIcon" src="/img/icons/png/letters.png">
+        <ul class="navbarText" id="contactText">Contact</ul>
+      </button>
+    </div>
+
+  </div>
+
+
+  <!-- =============NAME/TITLE DIV============= -->
+
+  <div class="nameDiv">
+
+    <p id="firstNameBorder"></p>
+    <h1 id="firstName">
+      Bilal
+    </h1>
+
+    <h1 id="lastName">
+      Hjiouaj
+    </h1>
+    <p id="lastNameBorder"></p>
+  </div>
+
+
+  <!-- =============CIRCLES DIV============= -->
+
+  <div class="circles">
+
+    <div id="cssCircle">
+      <p id="cssText">CSS</p>
+      <img id="cssIcon" src="/img/icons/png/css-3.png">
+    </div>
+
+    <div id="JSCircle">
+      <p id="JSText">JavaScript</p>
+      <img id="JSIcon" src="/img/icons/png/java-script.png">
+    </div>
+
+    <div id="HTMLCircle">
+      <p id="HTMLText">HTML</p>
+      <img id="HTMLIcon" src="/img/icons/png/html-5.png">
+    </div>
+
+    <div id="jQCircle">
+      <p id="jQText">jQuery</p>
+      <img id="jQIcon" src="/img/icons/png/jquery.png">
+    </div>
+
+  </div>
+
+
+  <!-- =============SOCIAL MEDIA DIV============= -->
+
+  <div class="SocMedDiv">
+
+    <div>
+      <img id="linkedInIcon" src="/img/icons/png/linkedin.png">
+      <p class="smText" id="linkedInText">LinkedIn</p>
+    </div>
+
+    <div>
+      <img id="GitIcon" src="/img/icons/png/github.png">
+      <p class="smText" id="GitText">GitHub</p>
+    </div>
+
+    <div>
+      <img id="twitterIcon" src="/img/icons/png/twitter.png">
+      <p class="smText" id="twitterText">Twitter</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!--
+===========================================
+===========================================
+============= PROJECTS PAGE ===============
+===========================================
+===========================================
+-->
+
+<div id="projectsDiv">
+
+  <div id="projectsTitleDiv">
+    <h1 id="projectsTitle">
+      Projects
+    </h1>
+    <p id="projectsTitleBorder"></p>
+  </div>
+
+  <div class="projects top2Projects" id="localWeather">
+    <a href="localWeather.html">
+      <img class="projectsImg" id="localWeatherImg" src="/img/projects/weather.png">
+    </a>
+  </div>
+
+  <div class="projects top2Projects" id="twitchTV">
+    <a href="localWeather.html">
+      <img class="projectsImg" id="twitchTVImg" src="/img/projects/twitchtv.png">
+    </a>
+  </div>
+
+  <div class="projects" id="jsCalc">
+    <a href="calc.html">
+      <img class="projectsImg" id="jsCalcImg" src="/img/projects/wikiviewer.png">
+    </a>
+  </div>
+
+  <div class="projects" id="quoteGen">
+    <a href="localWeather.html">
+      <img class="projectsImg" id="quoteGenImg" src="/img/projects/quote-generator.png">
+    </a>
+  </div>
+
+
+</div>
+
+
+
+
+<!--
+====================================================================
+====================================================================
+======================== CONTACT PAGE ==============================
+====================================================================
+====================================================================
+-->
+
+
+<div id="contactDiv">
+
+  <div id="contactTitleDiv">
+    <h1 id="contactTitle">Get In Touch</h1>
+    <p id="contactTitleDivBorder"></p>
+  </div>
+
+  <form ajax-contact" method="post" action="/mail.php">
+
+    <div id="contactInfoDiv">
+
+      <h1 id="contactInfoTitle">Contact Info</h1>
+
+      <div id="LinkedInEmailDiv">
+      <p id="contactEmail">
+        <img id="contactEmailIcon" src="/img/icons/png/email.png">
+        developer@bilalhjiouaj.com
+      </p>
+
+      <p id="contactLinkedIn">
+        <img id="contactLinkedInIcon" src="/img/icons/png/linkedin.png">
+        linkedin.com/in/hjiouaj
+      </p>
+      </div>
+
+    </div>
+
+    <div id="contactFieldDiv">
+
+      <div id="nameField" class="field">
+        <label id="name" for="name">
+          <img src="/img/icons/png/name.png">
+        </label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <div class="field">
+        <button type="submit">Send</button>
+      </div>
+    </div>
+
+  </form>
+
+  <div id="form-messages"></div>
+
+</div>
+
+
+
+  <script type="text/javascript" src="scripts/script.js"></script>
+
+</body>
+
+</html>
