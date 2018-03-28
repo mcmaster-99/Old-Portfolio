@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Audiowide);
+h1 {
+  text-align: center;
+  color: navy;
+  font-family: "Audiowide", cursive; }
+
+#text-box {
+  margin: 0 auto;
+  margin-top: 50px !important;
+  background-color: transparent;
+  color: navy;
+  width: 100%; }
+
+#location, #condition {
+  font-family: 'Patua One', cursive;
+  font-size: 15px;
+  text-align: center; }
+
+#conditionIcon {
+  width: 75px;
+  height: 75px; }
+
+#tempFHeader {
+  font-family: 'Patua One', cursive;
+  font-size: 50px;
+  text-align: center; }
+
+#tempCHeader {
+  font-family: 'Patua One', cursive;
+  font-size: 50px;
+  text-align: center; }
+
+.lows {
+  color: grey; }
+
+.container {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Audiowide", cursive; }
+
+#buttonWrapper {
+  width: 500px;
+  margin: 0 auto;
+  /* Centers div */
+  margin-top: 25px !important;
+  text-align: center;
+  /* Centers button */ }
+
+.toggle {
+  color: navy;
+  background: transparent;
+  padding: 5px;
+  border: 1px solid black;
+  font-weight: bold;
+  outline: 0; }
+
+.toggle:hover {
+  box-shadow: 1px 1px 1px 1px #27496d, 0 0px 1px #193047; }
+
+.toggle:active {
+  box-shadow: inset 0 0 0 1px #27496d, inset 0 5px 30px #193047; }
+
+#credits {
+  width: 33%;
+  text-align: left;
+  font-size: 5px;
+  position: absolute;
+  bottom: 5px; }
+
+#copyright p {
+  position: absolute;
+  text-align: right;
+  bottom: 5px;
+  width: 100%;
+  height: 5px; }
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+  #title h1 {
+    font-size: 25px; }
+  #text-box {
+    margin: 0 auto;
+    margin-top: 50px !important;
+    background-color: transparent;
+    color: navy;
+    width: 100%; }
+  #location, #condition {
+    font-family: 'Patua One', cursive;
+    font-size: 12px; }
+  #conditionIcon {
+    width: 50px;
+    height: 50px; }
+  #tempFHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  #tempCHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  .lows {
+    color: black; }
+  .container {
+    width: 100%;
+    margin-top: 50px;
+    font-family: "Audiowide", cursive; }
+  .col-xs-2 {
+    font-size: 15px; }
+  #buttonWrapper {
+    width: 100px;
+    margin-top: 50px !important;
+    text-align: center;
+    /* Centers button */ } }
+
+/* END IPHONE 6 (PORTRAIT) */
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
+  h1 {
+    font-size: 15px; }
+  #text-box {
+    margin: 0 auto;
+    margin-top: 25px !important;
+    background-color: transparent;
+    color: navy;
+    width: 100%; }
+  #location, #condition {
+    font-family: 'Patua One', cursive;
+    font-size: 7px; }
+  #conditionIcon {
+    width: 50px;
+    height: 50px; }
+  #tempFHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  #tempCHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  .lows {
+    color: gray; }
+  .container {
+    width: 75%;
+    margin-top: 25px;
+    font-family: "Audiowide", cursive; }
+  .col-xs-2 {
+    font-size: 9px; }
+  #buttonWrapper {
+    width: 100px;
+    margin: 0 auto;
+    /* Centers div */
+    margin-top: 25px !important;
+    text-align: center;
+    /* Centers button */ }
+  #credits {
+    margin-top: -50px; } }
+
+/* END IPHONE 6/7 (LANDSCAPE) */
+@media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) {
+  #title h1 {
+    font-size: 15px; }
+  #text-box {
+    margin: 0 auto;
+    margin-top: 25px !important;
+    background-color: transparent;
+    color: navy;
+    width: 100%; }
+  #location, #condition {
+    font-family: 'Patua One', cursive;
+    font-size: 7px; }
+  #conditionIcon {
+    width: 50px;
+    height: 50px; }
+  #tempFHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  #tempCHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  .lows {
+    color: gray; }
+  .container {
+    width: 75%;
+    margin-top: 25px;
+    font-family: "Audiowide", cursive; }
+  .col-xs-2 {
+    font-size: 10px; }
+  #buttonWrapper {
+    width: 100px;
+    margin: 0 auto;
+    /* Centers div */
+    margin-top: 25px !important;
+    text-align: center;
+    /* Centers button */ }
+  #credits {
+    margin-top: -50px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
+  h1 {
+    font-size: 15px; }
+  #text-box {
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: transparent;
+    color: navy;
+    width: 100%; }
+  #location, #condition {
+    font-family: 'Patua One', cursive;
+    font-size: 7px; }
+  #conditionIcon {
+    width: 50px;
+    height: 50px; }
+  #tempFHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  #tempCHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  .lows {
+    color: gray; }
+  .days {
+    font-size: 7px; }
+  .container {
+    width: 80%;
+    margin-top: 25px;
+    font-family: "Audiowide", cursive; }
+  .col-xs-2 {
+    font-size: 9px; }
+  #buttonWrapper {
+    width: 100px;
+    margin: 0 auto;
+    /* Centers div */
+    margin-top: 25px !important;
+    text-align: center;
+    /* Centers button */ }
+  #copyright p {
+    font-size: 10px; }
+  #credits {
+    margin-top: -50px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+  h1 {
+    font-size: 15px; }
+  #text-box {
+    margin: 0 auto;
+    margin-top: 15px !important;
+    background-color: transparent;
+    color: navy;
+    width: 100%; }
+  #location, #condition {
+    font-family: 'Patua One', cursive;
+    font-size: 7px; }
+  #conditionIcon {
+    width: 30px;
+    height: 30px; }
+  #tempFHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  #tempCHeader {
+    font-family: 'Patua One', cursive;
+    font-size: 15px; }
+  .lows {
+    color: gray; }
+  .days {
+    font-size: 7px; }
+  .container {
+    width: 80%;
+    margin-top: 5px;
+    font-family: "Audiowide", cursive; }
+  .col-xs-2 {
+    font-size: 9px; }
+  #buttonWrapper {
+    width: 100px;
+    margin: 0 auto;
+    /* Centers div */
+    margin-top: 5px !important;
+    text-align: center;
+    /* Centers button */ }
+  #copyright p {
+    font-size: 10px; }
+  #credits {
+    margin-top: -50px; } }

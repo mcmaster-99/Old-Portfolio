@@ -15,7 +15,7 @@
 		}
 
 		// Set my (recipient) email address
-		$recipient = "developer@bilalhjiouaj.com";
+		$recipient = "bsulaimanh@gmail.com";
 
 		// Email subject
 		$subject = "Web contact from $name";
@@ -32,7 +32,6 @@
 		if (mail($recipient, $subject, $email_content, $email_headers)) {
 			// if sending is successful
 			http_response_code(200);
-			echo "Your message has been sent. Thank you!";
 		} else {
 			// if sending is not successful
 			http_response_code(500);

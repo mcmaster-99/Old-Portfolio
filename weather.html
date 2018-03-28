@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <h1 id="title">
+      Local Weather Forecast
+    </h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="assets/weather-style.css" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- 
+    ============================================
+    =========== Current Day Forecast ===========
+    ============================================
+    -->
+    <div id="text-box">
+
+        <p id="location">
+        </p>
+
+        <p id="tempFHeader">
+        </p>
+        <p id="tempCHeader">
+        </p> 
+
+        <p id="condition">
+        </p> 
+        <p id="conditionIcon">.
+        </p>
+
+    </div>
+
+    <!-- 
+    ============================================
+    ============== 6 Day Forecast ==============
+    ============================================
+    -->
+    <div class="container forecastWrapper" id="forecastDiv">
+
+        <div class="row">
+            <div class="col-md-1 col-xs-2 col-sm-1 col-md-offset-3" id="boxInfo0">
+
+                <p id="forecast0_f_high">
+                </p>
+                <p class="lows" id="forecast0_f_low">
+                </p>
+
+                <p id="forecast0_c_high">
+                </p>
+                <p class="lows" id="forecast0_c_low">
+                </p>
+
+                <p class="days" id="day0">
+                </p>
+
+            </div>
+
+            <div class="col-md-1 col-xs-2 col-sm-1" id="boxInfo1">
+
+                <p id="forecast1_f_high">
+                </p>
+                <p class="lows" id="forecast1_f_low">
+                </p>
+
+                <p id="forecast1_c_high">
+                </p>
+                <p class="lows" id="forecast1_c_low">
+                </p>
+
+                <p class="days" id="day1">
+                </p>
+
+            </div>
+
+            <div class="col-md-1 col-xs-2 col-sm-1" id="boxInfo2">
+                
+                <p id="forecast2_f_high">
+                </p>
+                <p class="lows" id="forecast2_f_low">
+                </p>
+
+                <p id="forecast2_c_high">
+                </p>
+                <p class="lows" id="forecast2_c_low">
+                </p>
+
+                <p class="days" id="day2">
+                </p>
+
+            </div>
+
+            <div class="col-md-1 col-xs-2" id="boxInfo3">
+                
+                <p id="forecast3_f_high">
+                </p>
+                <p class="lows" id="forecast3_f_low">
+                </p>
+
+                <p id="forecast3_c_high">
+                </p>
+                <p class="lows" id="forecast3_c_low">
+                </p>
+
+                <p class="days" id="day3">
+                </p>
+
+            </div>
+
+            <div class="col-md-1 col-xs-2" id="boxInfo4">
+                
+                <p id="forecast4_f_high">
+                </p>
+                <p class="lows" id="forecast4_f_low">
+                </p>
+
+                <p id="forecast4_c_high">
+                </p>
+                <p class="lows" id="forecast4_c_low">
+                </p>
+
+                <p class="days" id="day4">
+                </p>
+
+            </div>
+
+            <div class="col-md-1 col-xs-2" id="boxInfo5">
+
+                <p id="forecast5_f_high">
+                </p>
+                <p class="lows" id="forecast5_f_low">
+                </p>
+
+                <p id="forecast5_c_high">
+                </p>
+                <p class="lows" id="forecast5_c_low">
+                </p>
+
+                <p class="days" id="day5">
+                </p>
+
+            </div>
+
+        </div> <!-- end row -->
+
+    </div> <!-- end forecastDiv -->
+
+
+
+
+
+
+    <!-- 
+    ============================================
+    ============== Toggle Button ==============
+    ============================================
+    -->
+    <div id="buttonWrapper">
+        <button class="toggle">Toggle C/F</button>
+    </div>
+
+
+
+
+
+
+    <!-- 
+    ============================================
+    ========== Credit the author ===============
+    ============================================
+    -->
+    <div class="container" id="credits">Icons made by
+        <a href="https://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver
+        </a> from 
+
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com
+        </a> is licensed by 
+
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY
+        </a>
+    </div> <!-- end credits -->
+
+    <div id="copyright">
+      <p>
+        Copyright (c) 2017 | All rights reserved
+      </p>
+    </div>
+    <script type="text/javascript" src="scripts/weather-script.js"></script>
+</body>
+</html>

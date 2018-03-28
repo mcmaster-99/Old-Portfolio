@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 	// Scrolling animation
-	$("#homeButton, #projectsNavButton, #contactNavButton").click(function(e) {
+	$("#homeNavButton, #projectsNavButton, #contactNavButton").click(function(e) {
 		// if error, prevent animation
 		e.preventDefault();
 
@@ -11,16 +11,16 @@ $(document).ready(function() {
 
 		// the page will scroll based on what the user
 		// clicks from the navigation bar.
-		if ($(this).get(0).id == "projectsNavButton") {
+		if ($(this).get(0).id == "homeNavButton") {
+			target = $("#homePage")
+		} else if ($(this).get(0).id == "projectsNavButton") {
 			target = $("#projectsDiv");
 		} else if ($(this).get(0).id == "contactNavButton") {
 			target = $("#contactDiv");
-		} else if ($(this).get(0).id == "homeButton") {
-			target = $("#homePage");
 		}
 
 		// Stops the scrolling exactly at the start of the div.
-		$("html, body").stop().animate({
+		$("html, body").animate({
 			scrollTop: target.offset().top-0
 		}, 1000);
 

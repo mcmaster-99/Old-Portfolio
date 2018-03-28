@@ -1,5 +1,7 @@
+/*IMPORTING FONTS*/
 @import url(https://fonts.googleapis.com/css?family=Fugaz+One|Graduate|Raleway|Open+Sans+Condensed:300);
 
+/* CREATE THE TITLE FONT */
 @font-face {
     font-family: textFont;
     src:    url(/fonts/aqua-webfont.woff2),
@@ -8,6 +10,7 @@
     font-weight: normal;
     font-style: normal;
 }
+/* CREATE THE TEXT FONT */
 @font-face {
     font-family: titleFont;
     src:    url(/fonts/MANIFESTO.ttf);
@@ -15,6 +18,7 @@
     font-style: normal;
 }
 
+/* VARIABLES */
 $grey: #DCDCDC;
 $light-grey: #EDEDED;
 $Fugaz: Fugaz One, cursive;
@@ -29,7 +33,7 @@ $Josefin: Open Sans Condensed, sans-serif;
 
 #homePage {
     width: 100%;
-    height: 850px;
+    height: 670px;
 }
 
 // ============= NAVIGATION BAR DIV ================
@@ -37,22 +41,35 @@ $Josefin: Open Sans Condensed, sans-serif;
     font-family: textFont;
     font-size: 20px;
     text-align: center;
-    margin-top: 40px;
     position: fixed;
     top: 0;
     width: 100%;
 }
-#projectsNavButton, #contactsNavButton {
+#projectsNavButton, #contactsNavButton, #homeNavButton {
     background-color: transparent;
     border: none;
 }
-#projectsIcon, #projectsText {
-    display: inline-block;
-    padding: 0px;
-}
+#homeIcon, #homeText,
+#projectsIcon, #projectsText,
 #contactIcon, #contactText {
     display: inline-block;
     padding: 0px;
+    margin-right: auto;
+}
+#homeIcon, #projectsIcon, #contactIcon {
+    margin-top: -9px;
+}
+#homeIcon {
+    margin-left: -25px;
+}
+button:hover{
+    color: gray;
+}
+button:active{
+    font-size: 19px;
+}
+button:focus {
+    outline: 0;
 }
 
 
@@ -62,6 +79,7 @@ $Josefin: Open Sans Condensed, sans-serif;
     margin-left: 100px;
     width: 400px;
     opacity: 0;
+    padding-top: 125px;
 }
 #firstName {
     font-size: 100px;
@@ -184,27 +202,18 @@ $Josefin: Open Sans Condensed, sans-serif;
     font-size: 20px;
 }
 
-#linkedInText {
+#linkedInText, #linkedInIcon,
+#GitText, #GitIcon,
+#twitterText, #twitterIcon {
     display: inline-block;
 }
-#linkedInIcon {
-    display: inline-block;
+#linkedInIcon, #GitIcon {
+    margin-top: -10px;
 }
-
-
-#GitText {
-    display: inline-block;
-}
-#GitIcon {
-    display: inline-block;
-}
-
-
-#twitterText {
-    display: inline-block;
-}
-#twitterIcon {
-    display: inline-block;
+a:hover {
+    text-decoration: none;
+}a:active {
+    text-decoration: none;
 }
 
 
@@ -214,13 +223,12 @@ $Josefin: Open Sans Condensed, sans-serif;
 
 
 #projectsDiv {
-    height: 850px;
+    height: 650px;
 }
 #projectsTitleDiv {
-    float: left;
     height: 100px;
-    margin-top: 300px;
-    margin-left: 20px;
+    text-align: center;
+    padding-top: 150px;
     text-shadow: 2px 2px 7px black;
 }
 #projectsTitle {
@@ -230,78 +238,60 @@ $Josefin: Open Sans Condensed, sans-serif;
 #projectsTitleBorder {
     border: 1px solid black;
     width: 100px;
+    margin-left: 430px;
     box-shadow: 2px 2px 7px black;
 }
 
 
-.projects {
+.projectsImgDiv {
     display: grid;
-    grid-template-columns: repeat(2, 175px);
-    grid-template-rows: repeat(2, 110px);
-    float: right;
-}
-.top2Projects {
-    margin-top: 120px;
-}
-
-#quoteGen {
-    grid-column: 1;
-    grid-row: 1;
-}
-#quoteGenImg {
-    width: 300px;
-    height: 200px;
-}
-#quoteGenImg:hover {
-    width: 305px;
-    height: 205px;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 15px;
+    padding-top: 200px;
+    width: 100%;
+    justify-content: center;
 }
 
-
+/* DIVS */
 #localWeather {
-    grid-column: 2;
-    grid-row: 1;
-}
-#localWeatherImg {
-    width: 300px;
-    height: 200px;
-}
-#localWeatherImg:hover {
-    width: 305px;
-    height: 205px;
-}
-
-
-#twitchTV {
     grid-column: 1;
-    grid-row: 2;
 }
-#twitchTVImg {
-    width: 300px;
-    height: 200px;
-}
-#twitchTVImg:hover {
-    width: 305px;
-    height: 205px;
-}
-
-
-#jsCalc {
+#twitchTV {
     grid-column: 2;
-    grid-row: 2;
 }
-#jsCalcImg {
-    width: 300px;
-    height: 200px;
+#wikiViewer {
+    grid-column: 3;
 }
-#jsCalcImg:hover {
-    width: 305px;
-    height: 205px;
+#jsCalc {
+    grid-column: 4;
+}
+#quoteGen {
+    grid-column: 5;
+}
+
+/* IMAGES */
+img#quoteGenImg, img#localWeatherImg, img#wikiViewerImg,
+img#twitchTVImg, img#jsCalcImg {
+    width: 200px;
+    height: 125px;
+}
+
+/* IMAGE HOVERS */
+img#quoteGenImg:hover, img#localWeatherImg:hover, img#wikiViewerImg:hover,
+img#twitchTVImg:hover, img#jsCalcImg:hover {
+    width: 201px;
+    height: 126px;
 }
 
 .projectsImg {
     border: 1px solid black;
     box-shadow: 2px 2px 7px black;
+}
+
+#gitHubLink {
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -311,8 +301,7 @@ $Josefin: Open Sans Condensed, sans-serif;
     *****************************************/
 
 #contactDiv {
-    height: 850px;
-    border: 1px solid black;
+    height: 500px;
     text-align: center;
 }
 #contactTitleDiv {
@@ -330,19 +319,19 @@ $Josefin: Open Sans Condensed, sans-serif;
 
 form {
     text-align: center;
-    border: 1px solid black;
     height: 225px;
     width: 500px;
     margin: 50px auto;
 }
 
-
+/* LEFT ALIGNED SECTION */
 #contactInfoDiv {
     height: 225px;
     width: 230px;
     float: left;
     background-color: #70c3ff;
     padding: 10px;
+    border: 1px solid black;
 }
 #contactInfoTitle {
     font-size: 25px;
@@ -356,9 +345,7 @@ form {
     font-weight: bold;
     float: left;
 }
-#LinkedInEmailDiv {
-    width: 200px; 
-    height: 50px;
+#emailsDiv {
     margin-top: 30px;
 }
 #contactEmailIcon, #contactLinkedInIcon {
@@ -367,15 +354,52 @@ form {
 
 
 
-
+/* RIGHT ALIGNED SECTION */
 #contactFieldDiv {
     height: 225px;
     width: 268px;
     float: right;
-    border: 1px solid red;
 }
-#nameField {
+
+#nameIconDiv, #emailIconDiv, #messageIconDiv {
+    width: 45px;
+    height: 35px;
+    padding: 3px;
+    border: 1px solid black;
     background-color: #70c3ff;
+}
+#nameIcon, #emailIcon, #messageIcon {
+    vertical-align: middle;
+}
+#nameLabel, #emailLabel, #messageLabel {
+    margin-right: -5px;
+    vertical-align: top;
+}
+#nameInput, #emailInput, #messageInput {
+    width: 210px;
+    height: 35px;
+    border-radius: 0px;
+    padding: 5px;
+    background-color: #cacaca;
+    border: 1px solid black;
+}
+#messageIconDiv {
+    height: 100px;
+}
+#messageInput {
+    height: 100px;
+}
+
+#submitButton {
+    width: 255px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: #70c3ff;
+    border: 1px solid black;
+    font-family: textFont;
+}
+::placeholder {
+    font-family: textFont;
 }
 
 
@@ -391,7 +415,7 @@ and (max-width: 325px)
 and (orientation: portrait) {
 
     #homePage {
-        height: 45em;
+        height: 650px;
     }
 
     .navbar {
@@ -400,19 +424,13 @@ and (orientation: portrait) {
         text-align: center;
         margin-top: 50px;
     }
-    #projectsIcon {
+    #homeIcon, #homeText,
+    #projectsIcon, #projectsText,
+    #contactIcon, #contactText {
         display: inline-block;
     }
-    #projectsText {
-        display: inline-block;
-        margin-left: -35px;
-    }
-    #contactIcon {
-        display: inline-block;
-    }
-    #contactText {
-        margin-left: -35px;
-        display: inline-block;
+    #projectsText, #contactText, #homeText {
+        margin-right: auto;
     }
 
 
@@ -423,30 +441,24 @@ and (orientation: portrait) {
         opacity: 0;
         width: 200px;
     }
-    #firstName {
-        font-family: titleFont;
+
+    #firstName, #lastName {
         font-size: 50px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+    }
+
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -5px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 50px;
-        text-shadow: 2px 2px 7px black;
-    }
     #lastNameBorder {
-        border: 1px solid black;
-        margin-left: -1000px;
         margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
     }
 
 
@@ -490,10 +502,6 @@ and (orientation: portrait) {
         font-family: textFont;
         font-size: 15px;
     }
-    #JSIcon {
-        width: 30px;
-        height: 30px;
-    }
 
     #HTMLCircle {
         height: 100px;
@@ -509,10 +517,6 @@ and (orientation: portrait) {
         margin-top: 20px;
         font-family: textFont;
         font-size: 15px;
-    }
-    #HTMLIcon {
-        width: 25px;
-        height: 25px;
     }
 
     #jQCircle {
@@ -530,9 +534,10 @@ and (orientation: portrait) {
         font-family: textFont;
         font-size: 15px;
     }
-    #jQIcon {
-        width: 25px;
-        height: 25px;
+
+    #cssIcon, #JSIcon, #HTMLIcon, #jQIcon {
+        width: 35px;
+        height: 35px;
     }
 
 
@@ -545,26 +550,9 @@ and (orientation: portrait) {
         font-size: 12px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
-        display: inline-block;
-    }
-
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
+    #linkedInText, #linkedInIcon,
+    #GitText, #GitIcon,
+    #twitterText, #twitterIcon {
         display: inline-block;
     }
 
@@ -592,19 +580,23 @@ and (orientation: portrait) {
 
     .projects {
         display: grid;
-        grid-template-columns: 320px;
         grid-template-rows: 175px;
         justify-items: center;
     }
     .top2Projects {
         margin-top: 0px;
     }
+    #localWeather {
+        margin-top: 50px;
+    }
 
     #localWeather {
         grid-row: 1;
-        margin-top: 50px;
     }
-    #localWeatherImg {
+
+
+
+    #localWeatherImg, #twitchTVImg, #jsCalcImg, #quoteGenImg {
         height: 150px;
         width: 215px;
     }
@@ -612,32 +604,15 @@ and (orientation: portrait) {
     #twitchTV {
         grid-row: 2;
     }
-    #twitchTVImg {
-        height: 150px;
-        width: 215px;
-    }
 
     #jsCalc {;
         grid-row: 3;
     }
-    #jsCalcImg {
-        height: 150px;
-        width: 215px;
-    }
 
     #quoteGen {
         grid-row: 4;
-        text-align: center;
-    }
-    #quoteGenImg {
-        height: 150px;
-        width: 215px;
     }
 
-    .projectsImg {
-        border: 1px solid black;
-        box-shadow: 2px 2px 7px black;
-    }
 }
 
 
@@ -659,18 +634,9 @@ and (orientation: landscape) {
         text-align: center;
         margin-top: 20px;
     }
-    #projectsIcon {
-        display: inline-block;
-    }
-    #projectsText {
-        display: inline-block;
-        margin-left: -35px;
-    }
-    #contactIcon {
-        display: inline-block;
-    }
-    #contactText {
-        margin-left: -35px;
+    #homeIcon, #homeText,
+    #projectsIcon, #projectsText,
+    #contactIcon, #contactText {
         display: inline-block;
     }
 
@@ -678,35 +644,32 @@ and (orientation: landscape) {
     // =============== NAME/TITLE DIV =================
     .nameDiv {
         font-family: titleFont;
-        margin-left: 50px;
-        margin-top: 20px;
+        font-size: 50px;
+        margin-left: 10px;
+        margin-top: 100px;
         opacity: 0;
         width: 200px;
     }
-    #firstName {
-        font-family: titleFont;
+
+    #firstName, #lastName {
+        margin-top: 35px;
         font-size: 50px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -20px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 50px;
-        text-shadow: 2px 2px 7px black;
-    }
     #lastNameBorder {
-        border: 1px solid black;
-        margin-left: -1000px;
         margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
     }
 
 
@@ -716,7 +679,7 @@ and (orientation: landscape) {
         display: grid;
         grid-template-columns: repeat(10, 20px);
         grid-template-rows: repeat(15, 20px);
-        margin-top: -130px;
+        margin-top: -120px;
         margin-right: 30px;
     }
     #cssCircle {
@@ -728,14 +691,7 @@ and (orientation: landscape) {
         grid-row: 1;
         text-align: center;
     }
-    #cssText {
-        color: white;
-        margin-top: 15px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-
-    #JSCircle {
+    #JSCircle, #HTMLCircle {
         height: 100px;
         width: 100px;
         background-color: #44bbd6;
@@ -744,37 +700,11 @@ and (orientation: landscape) {
         grid-row: 2;
         text-align: center;
     }
-    #JSText {
-        color: white;
-        margin-top: 20px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-    #JSIcon {
-        width: 30px;
-        height: 30px;
-    }
-
     #HTMLCircle {
-        height: 100px;
-        width: 100px;
         background-color: #3480b7;
-        border-radius: 100px;
         grid-column: 6;
         grid-row: 6;
-        text-align: center;
     }
-    #HTMLText {
-        color: white;
-        margin-top: 20px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-    #HTMLIcon {
-        width: 25px;
-        height: 25px;
-    }
-
     #jQCircle {
         height: 75px;
         width: 75px;
@@ -784,15 +714,29 @@ and (orientation: landscape) {
         grid-row: 8;
         text-align: center;
     }
-    #jQText {
+
+    #cssText, #JSText, #HTMLText, #jQText {
         color: white;
-        margin-top: 10px;
         font-family: textFont;
         font-size: 15px;
     }
-    #jQIcon {
-        width: 25px;
-        height: 25px;
+    #cssText {
+        margin-top: 15px;
+    }
+    #JSText {
+        margin-top: 25px;
+    }
+    #HTMLText {
+        margin-top: 25px;
+    }
+    #jQText {
+        margin-top: 13px;
+    }
+
+    #cssIcon, #JSIcon, #HTMLIcon, #jQIcon {
+        margin-top: -5px;
+        width: 30px;
+        height: 30px;
     }
 
 
@@ -805,28 +749,12 @@ and (orientation: landscape) {
         font-size: 10px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
+    #linkedInText, #linkedInIcon,
+    #GitText, #GitIcon,
+    #twitterText, #twitterIcon {
         display: inline-block;
     }
 
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
-        display: inline-block;
-    }
 }
 
 
@@ -838,7 +766,7 @@ and (orientation: landscape) {
 
 @media only screen
 and (max-width: 375px)
-and (max-height: 667px)
+and (-webkit-min-device-pixel-ratio: 1)
 and (orientation: portrait) {
     .navbar {
         font-family: textFont;
@@ -846,131 +774,112 @@ and (orientation: portrait) {
         text-align: center;
         margin-top: 20px;
     }
-    #projectsIcon, #projectsText {
-        display: inline-block;
-        display: inline-block;
-    }
+    #projectsIcon, #projectsText,
     #contactIcon, #contactText {
         display: inline-block;
-        display: inline-block;
     }
 
 
-    // =============== NAME/TITLE DIV =================
+    // ========= NAME/TITLE DIV (iphone 6/7/8 PORTRAIT)==========
     .nameDiv {
         font-family: titleFont;
         margin-left: 20px;
         opacity: 0;
         width: 200px;
     }
-    #firstName {
+
+    #firstName, #lastName {
         font-family: titleFont;
         font-size: 50px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -5px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 50px;
-        text-shadow: 2px 2px 7px black;
-    }
-    #lastNameBorder {
-        border: 1px solid black;
-        margin-left: -1000px;
-        margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
-    }
 
 
-    // =============== CIRCLES DIV =================
+    // ========== CIRCLES DIV (iphone 6/7/8 PORTRAIT) ===========
 
     .circles {
         display: grid;
-        grid-template-columns: repeat(10, 20px);
-        grid-template-rows: repeat(15, 20px);
+        grid-template-columns: repeat(10, 15px);
+        grid-template-rows: repeat(10, 15px);
         margin-top: 150px;
         margin-right: 50px;
     }
+
+
     #cssCircle {
-        height: 85px;
-        width: 85px;
+        height: 75px;
+        width: 75px;
         background-color: #a09add;
         border-radius: 50px;
         grid-column: 6;
         grid-row: 1;
         text-align: center;
     }
-    #cssText {
-        color: white;
-        margin-top: 15px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-
     #JSCircle {
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
         background-color: #44bbd6;
         border-radius: 100px;
         grid-column: 1;
         grid-row: 2;
         text-align: center;
     }
-    #JSText {
-        color: white;
-        margin-top: 20px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-    #JSIcon {
-        width: 30px;
-        height: 30px;
-    }
-
     #HTMLCircle {
-        height: 100px;
-        width: 100px;
+        height: 90px;
+        width: 90px;
         background-color: #3480b7;
         border-radius: 100px;
         grid-column: 6;
         grid-row: 6;
         text-align: center;
     }
-    #HTMLText {
-        color: white;
-        margin-top: 20px;
-        font-family: textFont;
-        font-size: 15px;
-    }
-    #HTMLIcon {
-        width: 25px;
-        height: 25px;
-    }
-
     #jQCircle {
-        height: 75px;
-        width: 75px;
+        height: 65px;
+        width: 65px;
         background-color: #067ed6;
         border-radius: 100px;
         grid-column: 2;
         grid-row: 8;
         text-align: center;
     }
-    #jQText {
+
+
+    #cssText, #JSText, #HTMLText, #jQText {
         color: white;
-        margin-top: 10px;
+        margin-top: 15px;
         font-family: textFont;
+        font-size: 12px;
+    }
+
+    #JSText {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    #HTMLText {
+        margin-top: 20px;
         font-size: 15px;
     }
-    #jQIcon {
+
+    #jQText {
+        margin-top: 15px;
+        margin-bottom: -1px;
+        font-size: 12px;
+    }
+
+
+    #cssIcon, #JSIcon, #HTMLIcon, #jQIcon {
         width: 25px;
         height: 25px;
     }
@@ -985,26 +894,9 @@ and (orientation: portrait) {
         font-size: 15px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
-        display: inline-block;
-    }
-
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
+    #linkedInText, #linkedInIcon,
+    #GitText, #GitIcon,
+    #twitterText, #twitterIcon {
         display: inline-block;
     }
 
@@ -1014,7 +906,7 @@ and (orientation: portrait) {
     ************************************************************/
 
     #projectsDiv {
-        height: 950px;
+        height: 850px;
         width: 100%;
         text-align: center;
     }
@@ -1039,49 +931,36 @@ and (orientation: portrait) {
         display: grid;
         grid-template-columns: 375px;
         grid-template-rows: 175px;
-        float: none;
-        align-items: center;
     }
     .top2Projects {
         margin-top: 0px;
+    }
+
+    #localWeatherImg, #twitchTVImg,
+    #quoteGenImg, #jsCalcImg {
+        height: 150px;
+        width: 215px;
     }
 
     #localWeather {
         grid-row: 1;
         margin-top: 50px;
     }
-    #localWeatherImg {
-        height: 150px;
-        width: 215px;
-    }
 
     #twitchTV {
         grid-row: 2;
     }
-    #twitchTVImg {
-        height: 150px;
-        width: 215px;
-    }
 
     #jsCalc {;
         grid-row: 3;
-    }
-    #jsCalcImg {
-        height: 150px;
-        width: 215px;
     }
 
     #quoteGen {
         grid-row: 4;
         text-align: center;
     }
-    #quoteGenImg {
-        height: 150px;
-        width: 215px;
-    }
 
     .projectsImg {
-        border: 1px solid black;
         box-shadow: 2px 2px 7px black;
     }
 
@@ -1091,7 +970,146 @@ and (orientation: portrait) {
 
     #contactDiv {
         height: 850px;
+        width: 100%;
+    }
+    #contactTitleDiv {
+        margin-top: 250px;
+    }
+    #contactTitle {
+        font-size: 40px;
+        font-family: titleFont;
+    }
+    #contactTitleDivBorder {
         border: 1px solid black;
+        width: 100px;
+        margin-left: 35px;
+    }
+
+    form {
+        text-align: center;
+        height: 225px;
+        width: 100%;
+    }
+
+
+    #contactInfoDiv {
+        height: 155px;
+        width: 255px;
+        background-color: #70c3ff;
+        padding: 10px;
+        float: none;
+        margin: 100px auto 0 auto;
+    }
+    #contactInfoTitle {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: textFont;
+        margin-right: 25px;
+    }
+    #contactEmail, #contactLinkedIn {
+        font-family: textFont;
+        font-size: 11px;
+        font-weight: bold;
+        float: left;
+    }
+    #emailsDiv {
+        width: 200px; 
+        height: 50px;
+        margin-top: 30px;
+    }
+    #contactEmailIcon, #contactLinkedInIcon {
+        width: 15px;
+    }
+
+
+
+
+    #contactFieldDiv {
+        height: 225px;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    #nameIconDiv {
+        width: 45px;
+        height: 35px;
+        padding: 3px;
+        border: 1px solid black;
+        background-color: #70c3ff;
+    }
+    #nameIcon {
+        vertical-align: middle;
+    }
+    #nameLabel {
+        margin-right: -5px;
+        vertical-align: top;
+    }
+    #nameInput {
+        width: 210px;
+        height: 35px;
+        border-radius: 0px;
+        background-color: #cacaca;
+        border: 1px solid black;
+    }
+
+
+    #emailIconDiv {
+        width: 45px;
+        height: 35px;
+        padding: 3px;
+        border: 1px solid black;
+        background-color: #70c3ff;
+    }
+    #emailIcon {
+        vertical-align: top;
+    }
+    #emailLabel {
+        margin-right: -5px;
+        vertical-align: top;
+    }
+    #emailInput {
+        width: 210px;
+        height: 35px;
+        border-radius: 0px;
+        background-color: #cacaca;
+        border: 1px solid black;
+    }
+
+
+    #messageIconDiv {
+        width: 45px;
+        height: 100px;
+        padding: 3px;
+        border: 1px solid black;
+        background-color: #70c3ff;
+    }
+    #messageIcon {
+        vertical-align: top;
+    }
+    #messageLabel {
+        margin-right: -5px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #messageInput {
+        width: 210px;
+        height: 100px;
+        border-radius: 0px;
+        background-color: #cacaca;
+        border: 1px solid black;
+    }
+
+    #submitButton {
+        width: 255px;
+        height: 40px;
+        border-radius: 0px;
+        background-color: #70c3ff;
+        border: 1px solid black;
+        font-family: textFont;
+    }
+    ::placeholder {
+        font-family: textFont;
+        padding: 2px;
     }
 
 }
@@ -1113,20 +1131,6 @@ and (orientation: landscape) {
         text-align: center;
         margin-top: 20px;
     }
-    #projectsIcon {
-        display: inline-block;
-    }
-    #projectsText {
-        display: inline-block;
-        margin-left: -35px;
-    }
-    #contactIcon {
-        display: inline-block;
-    }
-    #contactText {
-        margin-left: -35px;
-        display: inline-block;
-    }
 
 
     // =============== NAME/TITLE DIV =================
@@ -1136,30 +1140,26 @@ and (orientation: landscape) {
         opacity: 0;
         width: 200px;
     }
-    #firstName {
+    #firstName, #lastName {
         font-family: titleFont;
         font-size: 50px;
+        margin-top: 30px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -20px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 50px;
-        text-shadow: 2px 2px 7px black;
-    }
     #lastNameBorder {
-        border: 1px solid black;
         margin-left: -1000px;
         margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
     }
 
 
@@ -1258,28 +1258,6 @@ and (orientation: landscape) {
         font-size: 15px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
-        display: inline-block;
-    }
-
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
-        display: inline-block;
-    }
 }
 
 
@@ -1300,20 +1278,6 @@ and (orientation: portrait) {
         text-align: center;
         margin-top: 20px;
     }
-    #projectsIcon {
-        display: inline-block;
-    }
-    #projectsText {
-        display: inline-block;
-        margin-left: -35px;
-    }
-    #contactIcon {
-        display: inline-block;
-    }
-    #contactText {
-        margin-left: -35px;
-        display: inline-block;
-    }
 
 
     // =============== NAME/TITLE DIV =================
@@ -1323,31 +1287,27 @@ and (orientation: portrait) {
         opacity: 0;
         width: 200px;
     }
-    #firstName {
+    #firstName, #lastName {
         font-family: titleFont;
         font-size: 70px;
+        margin-top: 35px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -20px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 70px;
-        text-shadow: 2px 2px 7px black;
-    }
     #lastNameBorder {
-        border: 1px solid black;
-        margin-left: -1000px;
         margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
     }
+    
 
 
     // =============== CIRCLES DIV =================
@@ -1445,28 +1405,6 @@ and (orientation: portrait) {
         font-size: 15px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
-        display: inline-block;
-    }
-
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
-        display: inline-block;
-    }
 }
 
 
@@ -1486,20 +1424,6 @@ and (orientation: landscape) {
         text-align: center;
         margin-top: 20px;
     }
-    #projectsIcon {
-        display: inline-block;
-    }
-    #projectsText {
-        display: inline-block;
-        margin-left: -35px;
-    }
-    #contactIcon {
-        display: inline-block;
-    }
-    #contactText {
-        margin-left: -35px;
-        display: inline-block;
-    }
 
 
     // =============== NAME/TITLE DIV =================
@@ -1509,30 +1433,25 @@ and (orientation: landscape) {
         opacity: 0;
         width: 200px;
     }
-    #firstName {
+    #firstName, #lastName {
         font-family: titleFont;
         font-size: 70px;
+        margin-top: 35px;
         text-shadow: 2px 2px 7px black;
     }
-    #firstNameBorder {
+    #lastName {
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+    #firstNameBorder, #lastNameBorder {
         border: 1px solid black;
         width: 50px;
         margin-left: -1000px;
         margin-bottom: -20px;
         box-shadow: 2px 2px 7px black;
     }
-    #lastName {
-        margin-left: 50px;
-        margin-top: -20px;
-        font-size: 70px;
-        text-shadow: 2px 2px 7px black;
-    }
     #lastNameBorder {
-        border: 1px solid black;
-        margin-left: -1000px;
         margin-top: 0px;
-        width: 50px;
-        box-shadow: 2px 2px 7px black;
     }
 
 
@@ -1631,26 +1550,9 @@ and (orientation: landscape) {
         font-size: 15px;
     }
 
-    #linkedInText {
-        display: inline-block;
-    }
-    #linkedInIcon {
-        display: inline-block;
-    }
-
-
-    #GitText {
-        display: inline-block;
-    }
-    #GitIcon {
-        display: inline-block;
-    }
-
-
-    #twitterText {
-        display: inline-block;
-    }
-    #twitterIcon {
+    #linkedInText, #linkedInIcon,
+    #GitText, #GitIcon,
+    #twitterText, #twitterIcon {
         display: inline-block;
     }
 }

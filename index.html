@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0 maximum-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
@@ -29,16 +30,23 @@
 
   <div class="navbar">
 
+    <div id="homeNavDiv">
+      <button id="homeNavButton">
+        <img class="navbarIcons" id="homeIcon" src="/img/icons/home.png">
+        <ul class="navbarText" id="homeText">Home</ul>
+      </button>
+    </div>
+
     <div id="projectsNavDiv">
       <button id="projectsNavButton">
-        <img class="navbarIcons" id="projectsIcon" src="/img/icons/png/briefcase.png">
+        <img class="navbarIcons" id="projectsIcon" src="/img/icons/briefcase.png">
         <ul class="navbarText" id="projectsText">Projects</ul>
       </button>
     </div>
 
     <div id="contactNavButton">
       <button id="contactsNavButton">
-        <img class="navbarIcons" id="contactIcon" src="/img/icons/png/letters.png">
+        <img class="navbarIcons" id="contactIcon" src="/img/icons/letters.png">
         <ul class="navbarText" id="contactText">Contact</ul>
       </button>
     </div>
@@ -68,22 +76,22 @@
 
     <div id="cssCircle">
       <p id="cssText">CSS</p>
-      <img id="cssIcon" src="/img/icons/png/css-3.png">
+      <img id="cssIcon" src="/img/icons/css-3.png">
     </div>
 
     <div id="JSCircle">
       <p id="JSText">JavaScript</p>
-      <img id="JSIcon" src="/img/icons/png/java-script.png">
+      <img id="JSIcon" src="/img/icons/java-script.png">
     </div>
 
     <div id="HTMLCircle">
       <p id="HTMLText">HTML</p>
-      <img id="HTMLIcon" src="/img/icons/png/html-5.png">
+      <img id="HTMLIcon" src="/img/icons/html-5.png">
     </div>
 
     <div id="jQCircle">
       <p id="jQText">jQuery</p>
-      <img id="jQIcon" src="/img/icons/png/jquery.png">
+      <img id="jQIcon" src="/img/icons/jquery.png">
     </div>
 
   </div>
@@ -94,18 +102,17 @@
   <div class="SocMedDiv">
 
     <div>
-      <img id="linkedInIcon" src="/img/icons/png/linkedin.png">
-      <p class="smText" id="linkedInText">LinkedIn</p>
+      <a target="_blank" href="https://www.linkedin.com/in/hjiouaj">
+        <img id="linkedInIcon" src="/img/icons/linkedin.png">
+        <p id="linkedInText">LinkedIn</p>
+      </a>
     </div>
 
     <div>
-      <img id="GitIcon" src="/img/icons/png/github.png">
-      <p class="smText" id="GitText">GitHub</p>
-    </div>
-
-    <div>
-      <img id="twitterIcon" src="/img/icons/png/twitter.png">
-      <p class="smText" id="twitterText">Twitter</p>
+      <a target="_blank" href="https://github.com/mcmaster-99">
+        <img id="GitIcon" src="/img/icons/github.png">
+        <p id="GitText">GitHub</p>
+      </a>
     </div>
 
   </div>
@@ -130,28 +137,52 @@
     <p id="projectsTitleBorder"></p>
   </div>
 
-  <div class="projects top2Projects" id="localWeather">
-    <a href="localWeather.html">
-      <img class="projectsImg" id="localWeatherImg" src="/img/projects/weather.png">
-    </a>
-  </div>
+  <div class="projectsImgDiv">
 
-  <div class="projects top2Projects" id="twitchTV">
-    <a href="localWeather.html">
-      <img class="projectsImg" id="twitchTVImg" src="/img/projects/twitchtv.png">
-    </a>
-  </div>
+    <div class="projects top2Projects" id="localWeather">
+      <a href="Local_Weather/weather.html">
+        <img class="projectsImg" id="localWeatherImg" src="/img/projects/weather.png">
+      </a>
+      <a href="https://github.com/mcmaster-99/Local-Weather" target="_blank">
+        <img id="gitHubLink" src="/img/icons/github.png">
+      </a>
+    </div>
 
-  <div class="projects" id="jsCalc">
-    <a href="calc.html">
-      <img class="projectsImg" id="jsCalcImg" src="/img/projects/wikiviewer.png">
-    </a>
-  </div>
+    <div class="projects top2Projects" id="twitchTV">
+      <a href="Twitch_TV/twitch.html">
+        <img class="projectsImg" id="twitchTVImg" src="/img/projects/twitchtv.png">
+      </a>
+      <a href="https://github.com/mcmaster-99/TwitchTV-Status" target="_blank">
+        <img id="gitHubLink" src="/img/icons/github.png">
+      </a>
+    </div>
 
-  <div class="projects" id="quoteGen">
-    <a href="localWeather.html">
-      <img class="projectsImg" id="quoteGenImg" src="/img/projects/quote-generator.png">
-    </a>
+    <div class="projects" id="wikiViewer">
+      <a href="Wiki_Viewer/wikiViewer.html">
+        <img class="projectsImg" id="wikiViewerImg" src="/img/projects/wikiviewer.png">
+      </a>
+      <a href="https://github.com/mcmaster-99/Wiki-Viewer" target="_blank">
+        <img id="gitHubLink" src="/img/icons/github.png">
+      </a>
+    </div>
+
+    <div class="projects" id="jsCalc">
+      <a href="JS_Calc/js-calc.html">
+        <img class="projectsImg" id="jsCalcImg" src="/img/projects/js-calc.png">
+      </a>
+      <a href="https://github.com/mcmaster-99/Calculator" target="_blank">
+        <img id="gitHubLink" src="/img/icons/github.png">
+      </a>
+    </div>
+
+    <div class="projects" id="quoteGen">
+      <a href="Quote_Gen/quote-gen.html">
+        <img class="projectsImg" id="quoteGenImg" src="/img/projects/quote-generator.png">
+      </a>
+      <a href="https://github.com/mcmaster-99/Random-Quote-Generator" target="_blank">
+        <img id="gitHubLink" src="/img/icons/github.png">
+      </a>
+    </div>
   </div>
 
 
@@ -182,41 +213,60 @@
 
       <h1 id="contactInfoTitle">Contact Info</h1>
 
-      <div id="LinkedInEmailDiv">
-      <p id="contactEmail">
-        <img id="contactEmailIcon" src="/img/icons/png/email.png">
-        developer@bilalhjiouaj.com
-      </p>
+      <div id="emailsDiv">
+        <p id="contactEmail">
+          <img id="contactEmailIcon" src="/img/icons/email.png">
+          developer@bilalhjiouaj.com
+        </p>
 
-      <p id="contactLinkedIn">
-        <img id="contactLinkedInIcon" src="/img/icons/png/linkedin.png">
-        linkedin.com/in/hjiouaj
-      </p>
+        <p id="contactLinkedIn">
+          <img id="contactLinkedInIcon" src="/img/icons/linkedin.png">
+          linkedin.com/in/hjiouaj
+        </p>
       </div>
 
     </div>
 
     <div id="contactFieldDiv">
-
+      <!--NAME-->
       <div id="nameField" class="field">
-        <label id="name" for="name">
-          <img src="/img/icons/png/name.png">
+
+        <label id="nameLabel" for="name">
+          <div id="nameIconDiv">
+            <img id="nameIcon" src="/img/icons/name.png">
+          </div>
         </label>
-        <input type="text" id="name" name="name" required>
+
+        <input type="text" id="nameInput" name="name" placeholder="Name" required>
+
+      </div>
+      <!--EMAIL-->
+      <div id="emailField" class="field">
+
+        <label id="emailLabel" for="email">
+          <div id="emailIconDiv">
+            <img id="emailIcon" src="/img/icons/email.png">
+          </div>
+        </label>
+
+        <input type="email" id="emailInput" name="email" placeholder="Email" required>
+
+      </div>
+      <!--MESSAGE-->
+      <div id="messageField" class="field">
+
+        <label id="messageLabel" for="message">
+          <div id="messageIconDiv">
+            <img src="/img/icons/speech-bubble.png">
+          </div>
+        </label>
+
+        <textarea id="messageInput" name="message" placeholder="Message" required></textarea>
+
       </div>
 
       <div class="field">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="field">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-
-      <div class="field">
-        <button type="submit">Send</button>
+        <button id="submitButton" type="submit">Send Email</button>
       </div>
     </div>
 
