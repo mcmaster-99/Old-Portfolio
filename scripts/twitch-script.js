@@ -25,6 +25,7 @@ $(document).ready(function(){
 
   streamers.forEach(function(name){
     $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/'+name+'?callback=?', function(data){
+      console.log(data)
       if (data.stream === null) { //IF CHANNEL IS OFFLINE
         $.getJSON('https://wind-bow.glitch.me/twitch-api/channels/'+name+'?callback=?', function(data){
           if (data.error === "Not Found") {
