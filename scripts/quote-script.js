@@ -18,7 +18,7 @@ Function to fetch new quote (using AJAX) from quotesdesign API===
 function randomQuote(){
   // Data Extraction Using Ajax (quote)
     $.ajax({
-      url: "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
+      url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1callback=?",
       type: "GET",
       datatype: 'jsonp',
       cache: false,
