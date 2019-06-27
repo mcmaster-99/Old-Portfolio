@@ -24,10 +24,10 @@ $(document).ready(function(){
   // END BUTTON EFFECTS
 
   streamers.forEach(function(name){
-    $.getJSON('https://wind-bow.glitch.me/twitch-api/streams/'+name+'?callback=?', function(data){
+    $.getJSON('https://wind-bow.glitch.me/twitch-api/helix/streams/'+name+'?callback=?', function(data){
       console.log(data)
       if (data.stream === null) { //IF CHANNEL IS OFFLINE
-        $.getJSON('https://wind-bow.glitch.me/twitch-api/channels/'+name+'?callback=?', function(data){
+        $.getJSON('https://wind-bow.glitch.me/twitch-api/helix/channels/'+name+'?callback=?', function(data){
           if (data.error === "Not Found") {
             // IF CHANNEL DOES NOT EXIST
             $('#box').append("<div id='nonexistent' class='row'><div class='row col-md-2 col-xs-2'>"
