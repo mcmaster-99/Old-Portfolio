@@ -41,10 +41,11 @@ $(document).ready(function() {
     ==============================
     */
     var data = $.parseJSON($.ajax({
-        url: "https://www.ip-api.com/json",
+        url: "https://api.ipdata.co?api-key=test",
         dataType: "json",
         async: false
         }).responseText);
+    console.log(data)
 
     city = data.city;
     state = data.region;
