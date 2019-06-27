@@ -23,67 +23,45 @@ $(document).ready(function(){
   });
   // END BUTTON EFFECTS
 
-  streamers.forEach(function(name){
-    $.getJSON('https://api.twitch.tv/helix/streams/'+name+'?callback=?', function(data){
-      console.log(data)
-      if (data.stream === null) { //IF CHANNEL IS OFFLINE
-        $.getJSON('https://api.twitch.tv/helix/streams/'+name+'?callback=?', function(data){
-          if (data.error === "Not Found") {
-            // IF CHANNEL DOES NOT EXIST
-            $('#box').append("<div id='nonexistent' class='row'><div class='row col-md-2 col-xs-2'>"
-                                + "<img class='logo' src='https://www.riyafoundation.org/wp-content/uploads/2013/11/default.png'>"
-                              + "</div>"
-                                +"<div class='text row col-md-3 col-xs-4'>"
-                                    +"<p>"+name+"</p>"
-                                +"</div>"
-                              + "<div class='text row col-md-3 col-xs-2'>"
-                                +"0"
-                              +"</div>"
-                              + "<div class='text row col-md-3 col-xs-1'>"
-                                +"Not Found"
-                              +"</div>"
-                              + "<div class='dot row col-md-0 col-xs-0'>"
-                                +"<font color='red'>&#9679</font>"
-                              +"</div>");
-          } else { // IF CHANNEL IS OFFLINE
-            $('#box').append("<div id='offline' class='row'>"
-                                +"<div class='row col-md-2 col-xs-2'>"
-                                    +"<img class='logo' src='"+data.logo+"'>"
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-4'>"
-                                    +"<p>"+name+"</p>"
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-2'>"
-                                    +"0"
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-1'>"
-                                    +"Offline"
-                                +"</div>"
-                                + "<div class='dot row col-md-0 col-xs-0'>"
-                                  +"<font color='red'>&#9679</font>"
-                                +"</div>");
-          }
-        }); // END JSON REQUEST
-      } else { //IF CHANNEL IS ONLINE
-          $('#box').append("<div id='online' class='row'>"
-                                +"<div class='row col-md-2 col-xs-2'>"
-                                    +"<img class='logo' src='"+data.stream.channel.logo+"'>"
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-4'>"
-                                    +"<p>"+name+"</p>"
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-2'>"
-                                    +data.stream.viewers+""
-                                +"</div>"
-                                +"<div class='text row col-md-3 col-xs-1'>"
-                                    +"Online"
-                                +"</div>"
-                                +"<div class='dot row col-md-0 col-xs-0'>"
-                                    +"<font color='green'>&#9679</font>"
-                                +"</div>");
-                                  
-        };
+    $.ajax({
+      type: "GET",
+      url: 'https://api.twitch.tv/helix/streams?'+name,
+      beforeSend: function (request) {
+        request.setRequestHeader("Client-ID", "6fudzu18tclw56mtk5s9hs4jzyzgoi");
+      },
+      success: onSuccess,
+      error: function error(jqXHR, textStatus, errorThrown) {
+        console.error('Error requesting devices: ', textStatus, ', Details: ', errorThrown);
+        console.error('Response: ', jqXHR.responseText);
+      }
     });
-  });
+    function onSuccess(data) {
+      
+      var streamers = data['data'].slice(0, 4);
+      console.log(streamers);
+
+      streamers.forEach(function(user){
+        var live_status_color = (user.type == "live") ? "green" : "red";
+        // IF CHANNEL DOES NOT EXIST
+        $('#box').append("<div id='nonexistent' class='row'><div class='row col-md-2 col-xs-2'>"
+                            + "<img class='logo' src='https://www.riyafoundation.org/wp-content/uploads/2013/11/default.png'>"
+                          + "</div>"
+                            +"<div class='text row col-md-3 col-xs-4'>"
+                                +"<p>"+user.user_name+"</p>"
+                            +"</div>"
+                          + "<div class='text row col-md-3 col-xs-2'>"
+                            +user.viewer_count
+                          +"</div>"
+                          + "<div class='text row col-md-3 col-xs-1'>"
+                            +user.type
+                          +"</div>"
+                          + "<div class='dot row col-md-0 col-xs-0'>"
+                            +"<font color='"+live_status_color+"'>&#9679</font>"
+                          +"</div>");
+      })
+
+      
+           
+    }
 
 });
