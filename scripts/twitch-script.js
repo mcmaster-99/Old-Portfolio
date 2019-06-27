@@ -1,4 +1,4 @@
-var streamers = ["SypherPK", "Comster404", "dreamhackcs"];
+
 
 $(document).ready(function(){
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     $.ajax({
       type: "GET",
-      url: 'https://api.twitch.tv/helix/streams?'+name,
+      url: 'https://api.twitch.tv/helix/streams?',
       beforeSend: function (request) {
         request.setRequestHeader("Client-ID", "6fudzu18tclw56mtk5s9hs4jzyzgoi");
       },
@@ -42,9 +42,10 @@ $(document).ready(function(){
 
       streamers.forEach(function(user){
         var live_status_color = (user.type == "live") ? "green" : "red";
+        var thumbnail = user.thumbnail_url
         // IF CHANNEL DOES NOT EXIST
         $('#box').append("<div id='nonexistent' class='row'><div class='row col-md-2 col-xs-2'>"
-                            + "<img class='logo' src='https://www.riyafoundation.org/wp-content/uploads/2013/11/default.png'>"
+                            + "<img class='logo' src='"+thumbnail+"'>"
                           + "</div>"
                             +"<div class='text row col-md-3 col-xs-4'>"
                                 +"<p>"+user.user_name+"</p>"
@@ -58,10 +59,7 @@ $(document).ready(function(){
                           + "<div class='dot row col-md-0 col-xs-0'>"
                             +"<font color='"+live_status_color+"'>&#9679</font>"
                           +"</div>");
-      })
-
-      
-           
+      })     
     }
 
 });
