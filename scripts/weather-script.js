@@ -50,8 +50,8 @@ $(document).ready(function() {
     state = data.region;
     $("#location").html(city + ", " + state);
 
-    var url = "http://api.openweathermap.org/data/2.5/weather?q="+data.city+"&appid=0df1207a9bd654f5403eaca4b23b4bb1";
-    var forecastURL = "http://api.openweathermap.org/data/2.5/forecast/daily?q="+data.city+"&appid=0df1207a9bd654f5403eaca4b23b4bb1";
+    var url = "https://api.openweathermap.org/data/2.5/weather?q="+data.city+"&appid=0df1207a9bd654f5403eaca4b23b4bb1";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast/daily?q="+data.city+"&appid=0df1207a9bd654f5403eaca4b23b4bb1";
 
     $.ajax({
         url: url,
