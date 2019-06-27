@@ -107,59 +107,6 @@ $(document).ready(function() {
 		$(".nameDiv").animate({
 			opacity : "1"
 		}, 2000);
-	}
-
-
-	$(function() {
-		//get form
-		var form = $("#ajax-contact");
-
-		//get messages div
-		var formMessages = $("#form-messages");
-
-		$(form).submit(function(event) {
-
-			//stop browser from submitting form
-			event.preventDefault();
-
-			//serialize form data
-			var formData = $(form).serialize();
-
-
-			$.ajax({
-				type: "post",
-				url: $(form).attr("action"),
-				dataType: "json",
-				data: formData,
-				crossDomain: true
-			}).done(function(response){
-				// remove error class and add success class
-				$(formMessages).removeClass('error');
-				$(formMessages).addClass('success');
-
-				$(formMessages).text(response);
-
-				//clear form
-				$("#name").val("");
-				$("#email").val("");
-				$("#messages").val("");
-			}).fail(function(data) {
-				// remove success class and add error class
-				$(formMessages).removeClass('success');
-				$(formMessages).addClass('error');
-
-				// set message text
-				if (data.responseText !== "") {
-					$(formMessages).text(data.responseText);
-				} else {
-					$(formMessages).text("An error occured. Try again.");
-				}
-			});
-		})
-
-
-	})
-
-	
+	}	
 
 });

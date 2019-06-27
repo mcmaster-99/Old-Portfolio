@@ -44,6 +44,8 @@ $Josefin: Open Sans Condensed, sans-serif;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: white;
+    box-shadow: 0 0 15px 10px white;
 }
 #projectsNavButton, #contactsNavButton, #homeNavButton {
     background-color: transparent;
@@ -301,7 +303,7 @@ img#twitchTVImg:hover, img#jsCalcImg:hover {
     *****************************************/
 
 #contactDiv {
-    height: 500px;
+    height: 475px;
     text-align: center;
 }
 #contactTitleDiv {
