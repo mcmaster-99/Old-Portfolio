@@ -41,7 +41,7 @@ $(document).ready(function() {
     ==============================
     */
     var data = $.parseJSON($.ajax({
-        url: "http://www.ip-api.com/json",
+        url: "https://www.ip-api.com/json",
         dataType: "json",
         async: false
         }).responseText);
