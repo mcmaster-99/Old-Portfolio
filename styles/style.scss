@@ -247,7 +247,8 @@ a:hover {
 
 .projectsImgDiv {
     display: grid;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
     grid-gap: 15px;
     padding-top: 200px;
     width: 100%;
@@ -257,18 +258,27 @@ a:hover {
 /* DIVS */
 #localWeather {
     grid-column: 1;
+    grid-row: 1;
 }
 #twitchTV {
     grid-column: 2;
+    grid-row: 1;
 }
 #wikiViewer {
     grid-column: 3;
+    grid-row: 1;
 }
 #jsCalc {
-    grid-column: 4;
+    grid-column: 1;
+    grid-row: 2;
 }
 #quoteGen {
-    grid-column: 5;
+    grid-column: 2;
+    grid-row: 2;
+}
+#inloDiv {
+    grid-column: 2;
+    grid-row: 3;
 }
 
 /* IMAGES */

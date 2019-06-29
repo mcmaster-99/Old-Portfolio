@@ -1,0 +1,170 @@
+/*Inlo colors*/
+/* ===========================================
+=============[MEDIUM DESKTOP] ================
+============================================*/
+/* ---------------- NAVBAR ---------------- */
+.navbar-div {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; }
+
+body {
+  background-color: #F9F9FB; }
+
+a {
+  color: #116CD2;
+  font-weight: bold; }
+
+.jumbotron p {
+  font-size: 14px;
+  font-weight: 400; }
+
+button {
+  color: #fff;
+  text-transform: uppercase; }
+
+nav {
+  width: 100%;
+  height: 3.5em;
+  padding: 10px;
+  text-align: center;
+  word-spacing: 15em;
+  background-color: #fff;
+  /* give space between navbar icons */ }
+
+nav a img {
+  height: 24px; }
+
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin: 100px 0px 0px 0px; }
+
+.page-title.incard {
+  font-weight: normal;
+  margin: 0; }
+
+/* ---------------- LOGIN JUMBOTRON ---------------- */
+form.jumbotron {
+  min-width: 400px;
+  width: 42%;
+  max-width: 488px;
+  height: 100%;
+  margin: 60px auto;
+  background-color: #ffffff;
+  padding: 48px 40px;
+  border-radius: 12px;
+  border: 1px solid #EBEAEC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); }
+
+p.card-intro {
+  text-align: center;
+  margin-top: 8px; }
+
+.container {
+  text-align: center;
+  padding: 16px 0px 0px 0px; }
+
+.login-icons {
+  width: 50%;
+  height: 50%; }
+
+label[for="email"], label[for="password"] {
+  width: 15vw; }
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  padding-left: 16px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: inline-block; }
+
+.forgot-pwd-div {
+  font-size: 14px;
+  text-align: left;
+  margin: 8px 0px 0px 0px;
+  /*margin-right*/ }
+
+/**
+**************** CUSTOM CHECKBOX ****************
+*/
+input[type="checkbox"] {
+  visibility: hidden;
+  /*hide original checkbox*/ }
+
+/* Create the square check box */
+.remember-me-div {
+  width: 25px;
+  margin: 20px 100px;
+  position: relative; }
+
+/* Create box for checkbox */
+.remember-me-div label[for="checkbox-input"] {
+  cursor: pointer;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 1;
+  background: #eee;
+  border: 1px solid #ddd;
+  display: inline-block; }
+
+/* Display tick inside checkbox */
+.remember-me-div label[for="checkbox-input"]:after {
+  opacity: 0.2;
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background: transparent;
+  top: 4px;
+  left: 2px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg); }
+
+/* Create the hover event of tick */
+.remember-me-div label[for="checkbox-input"]:hover::after {
+  opacity: 0.5; }
+
+/* Create the checkbox state for tick */
+.remember-me-div input[type="checkbox"]:checked + label:after {
+  opacity: 1; }
+
+/* Align remember me text with checkbox */
+.remember-me-div p {
+  display: inline-block;
+  width: 160px;
+  margin-left: 20px;
+  vertical-align: top;
+  font-size: 14px; }
+
+/**
+**************** CUSTOM CHECKBOX END ****************
+*/
+.login-button {
+  width: 246px;
+  height: 48px;
+  background: linear-gradient(102.2deg, #00D0A7 6.24%, #116CD2 96.88%);
+  border-radius: 100px;
+  border-color: #fff;
+  font-weight: bold;
+  transition: .5s; }
+
+.login-button:hover {
+  background: linear-gradient(102.2deg, #116CD2 6.24%, #116CD2 96.88%);
+  transition: .5s; }
+
+.new-user-button {
+  width: 70px;
+  height: 20px;
+  font-size: 10px; }
+
+.create-acc-div {
+  text-align: center;
+  margin-top: 48px; }

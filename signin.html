@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<html class="no-js">
+  <!-- HEAD -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Inlo Sign In</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- AWS S3 Directory -->
+    <link rel="stylesheet" href="css/signin.css" type="text/css">
+
+    <!-- [Enable when using Gulp] Gulp livereload environment route -->
+    <!--<link rel="stylesheet" href="assets/signin.css" type="text/css">-->
+  </head>
+
+
+  <!-- BODY -->
+  <body>
+
+    <div id="noCognitoMessage" class="configMessage" style="display: none;">
+        <div class="backdrop"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">No Cognito User Pool Configured</h3>
+            </div>
+            <div class="panel-body">
+                <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-div">
+      <nav>
+        <a href="#"><img src="images/logo-icon-name.svg" id="inlo-icon"></a>
+      </nav>
+    </div>
+
+    <section class="form-wrap">
+
+      <form id="signinForm" class="jumbotron form-wrap">
+
+        <h3 class="page-title incard">Log in</h3>
+        <p class="card-intro">to your Inlo account.</p>
+        <div class="container email-container">
+          <label for="email">Email</label>
+          <input type="email" id="emailInputSignin" placeholder="Email" name="email">
+        </div>
+
+        <div class="container pass-container">
+          <label for="password">Password</label>
+          <input type="password" id="passwordInputSignin" placeholder="Password" name="password" pattern=".*">
+        </div>
+
+
+        <div class="remember-me-div">
+          <input type="checkbox" value="1" id="checkbox-input" name="" />
+          <label for="checkbox-input"><p>Remember Me?</p></label>
+        </div>
+
+        <p id="notifs"></p>
+        
+
+
+        <div class="container login-btn-container">
+          <h3>Click sign in below to access the web application</h3>
+          <button type="submit" value="Sign in" class="login-button">Login</button>
+        </div>
+
+        <div class="create-acc-div">
+          <p>New user? <a href="register.html">Create an account!</a> </p>
+        </div>
+      </form>
+      
+
+    </section>
+
+
+
+
+    <script src="js/config.js"></script> <!-- Links to cognito user pool -->
+    <script src="js/cognito-auth.js"></script> <!-- Handles various user functionalities -->
+  </body>
+</html>
