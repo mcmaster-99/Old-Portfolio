@@ -19,7 +19,7 @@
     "gulp-concat": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
-    "npm": "^6.9.0",
+    "npm": "^9.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-dropdown": "^1.6.4",
